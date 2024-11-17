@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function OddorEven() {
+                results = "";
+                for (i = 1; i<=15; i++) {
+                    if (i%2 == 0) {
+                        result = `${i} is even<br/>`;
+                    }
+                    else {
+                        result = `${i} is odd<br/>`;
+                    }
+                    results += result;
+                }
+                document.getElementById("result").innerHTML = results;
+            }
+        </script>
+    </head>
+
+    <body>
+        <button onclick="OddorEven()"></button>
+        <p id = "result"></p>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            function celsiusToF() {
+                var celcius = document.getElementById("input-c").value;
+                var result = celcius/5*9+32;
+                document.getElementById("resulttoF").innerHTML = `Result = ${result}`;
+            }
+
+            function fahrenheitToC() {
+                var fahrenheit = document.getElementById("input-f").value;
+                var result = (fahrenheit-32)/9*5;
+                document.getElementById("resulttoC").innerHTML = `Result = ${result}`;
+            }
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <h2>Input the Farenheit</h2>
+            <input type="number" id="input-f">
+            <button onclick="fahrenheitToC()">Convert</button>
+            <p id="resulttoC"></p>
+        </div>
+        <div>
+            <h2>Input the Celcius</h2>
+            <input type="number" id="input-c">
+            <button onclick="celsiusToF()">Convert</button>
+            <p id="resulttoF"></p>
+        </div>
+    </body>
+</html>

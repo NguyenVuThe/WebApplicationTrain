@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                var firstClickTime = null;
+
+                $("p").click(function(){
+                    var currentTime = new Date().getTime();
+
+                    if (firstClickTime == null){
+                        firstClickTime = currentTime;
+                        $("#log").html("Caught first click");
+                    } else {
+                        var timeDiff = currentTime - firstClickTime;
+                        $("#log").html("Difference: "+ timeDiff +" milliseconds");
+                        firstClickTime = null;
+                        //reset
+                    }
+                })
+            })
+        </script>
+    </head>
+    
+    <body>
+        <h1>Heading1</h1>
+        <h2>Heading2</h2>
+        <p>Paragraph</p>
+        <button>Button</button>
+        <div id="log"></div>
+    </body>
+</html>

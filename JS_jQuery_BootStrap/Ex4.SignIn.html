@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .user {
+                display: flex;
+                align-items: center;
+            }
+        </style>
+        <script>
+            function checkSimilarity() {
+                var pass = document.getElementById("pwd").value;
+                var repass = document.getElementById("repwd").value;
+
+                if (pass == repass) {
+                    document.getElementById("result").innerHTML = `password is good to go`
+                } else {
+                    document.getElementById("result").innerHTML = `password is not ok`
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Sign Up</h1>
+            <div class = "user">
+                <p>Username</p>
+                <input type="text" id = "username">
+            </div>
+            <div class = "user">
+                <p>Password</p>
+                <input type="text" id = "pwd">
+            </div>
+            <div class = "user">
+                <p>Re-password</p>
+                <input type="text" id = "repwd">
+            </div>
+
+            <button onclick="checkSimilarity()">Check</button>
+            <p id = "result"></p>
+        </div>
+        
+    </body>
+</html>
